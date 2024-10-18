@@ -1,7 +1,6 @@
 import Head from "next/head";
-import Navbar from "@/fragments/Navbar";
-import Hero from "@/fragments/Hero";
-import Divisi from "@/fragments/Content/divisi";
+import Hero from "@/components/fragments/Hero";
+import Divisi from "@/components/fragments/Content/divisi";
 
 export default function Home() {
   return (
@@ -12,7 +11,6 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar></Navbar>
       <Hero></Hero>
       <Divisi></Divisi>
     </>
