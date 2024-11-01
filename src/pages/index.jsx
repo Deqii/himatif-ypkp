@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "@/components/fragments/Hero";
 import Divisi from "@/components/fragments/Content/divisi";
+import FeedbackForm from "@/components/fragments/FeedbackForm";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Hero></Hero>
       <Divisi></Divisi>
+      <FeedbackForm></FeedbackForm>
     </>
   );
 }

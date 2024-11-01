@@ -140,7 +140,7 @@ a {
   background-position: center;
   height: 600px;
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,81 +170,115 @@ a {
 
 .divisi-container {
   text-align: center;
-  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
-.divisi-item {
-  border: 1px solid #ddd;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-radius: 8px;
+.divisi-top h1 {
+  margin-top: 40px;
+  font-size: 2.2rem;
 }
 
-.divisi-item h3 {
-  font-size: 1.75rem;
+.highlight {
+  color: green;
+}
+
+.divisi-top h3 {
+  font-weight: 100;
   color: #333;
 }
 
-.divisi-members {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 1rem;
+.divisi-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+  grid-template-rows: repeat(2, auto); /* 2 baris */
+  gap: 10px;
 }
 
-.member {
-  margin: 0 1rem;
+.divisi-item {
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 15px;
+  transition: background-color 0.3s;
 }
 
-.member strong {
-  font-size: 1.25rem;
+/* Untuk mengatur posisi item */
+.divisi-item:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.member p {
-  margin: 0.5rem 0;
+.divisi-item:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
 }
 
-.anggota-container {
-  display: flex;
-  flex-wrap: wrap; /* Mengizinkan pembungkus untuk anggota */
+.divisi-item:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
 }
 
-.anggota-item {
-  display: flex;
-  align-items: center; /* Menjaga gambar dan teks di tengah */
-  margin: 10px;
+.divisi-item:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3;
 }
 
-.anggota-photo {
-  width: 60px; /* Ukuran foto anggota */
-  height: 60px; /* Ukuran foto anggota */
-  border-radius: 50%; /* Membuat foto berbentuk bulat */
-  margin-right: 10px; /* Jarak antara foto dan informasi */
+.divisi-item:nth-child(5) {
+  grid-column: 3;
+  grid-row: 3;
 }
 
-.anggota-info {
-  display: flex;
-  flex-direction: column; /* Mengatur informasi menjadi kolom */
+.divisi-item h3 {
+  margin: 8px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.divisi-item p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.divisi-item:hover {
+  background-color: lightgreen;
+  transition: background-color 0.3s;
 }
 
 .program-kerja-section {
-  padding: 50px 20px;
+  margin-top: 40px;
+  width: 85%;
+  margin: 0 auto;
   text-align: center;
+}
+
+.program-kerja-section h1 {
+  margin-top: 40px;
+  font-size: 2.2rem;
+}
+
+.program-kerja-section h3 {
+  font-weight: 100;
+  color: #333;
 }
 
 .program-kerja-container {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .program-item {
-  flex: 1;
-  margin: 0 15px;
+  width: 400px;
   text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
 }
 
 .program-item img {
-  border-radius: 10px;
+  border-radius: 20px 20px 0 0;
   background-size: cover;
   background-position: center;
 }
@@ -255,7 +289,11 @@ a {
   font-weight: bold;
 }
 
-.tentang-kami {
+.program-item p {
+  color: #666;
+}
+
+/* .tentang-kami {
   font-family: "Arial", sans-serif;
   padding: 20px;
   max-width: 1200px;
@@ -273,7 +311,7 @@ a {
 }
 
 .header-section .highlight {
-  color: #007bff; /* Ganti dengan warna biru sesuai desain */
+  color: green;
 }
 
 .header-section p {
@@ -338,6 +376,64 @@ a {
 .ketua-description ul {
   list-style-type: disc;
   margin-left: 20px;
+} */
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
+  height: 40vh;
+  background-color: #007bff;
+  border-radius: 20px;
+  padding: 20px;
+}
+.content {
+  text-align: left;
+  color: white;
+  max-width: 600px;
+  margin-right: 50px;
+}
+.content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+.content p {
+  font-size: 18px;
+  margin: 10px 0 30px;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+}
+.form-container input[type="text"] {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  width: 300px;
+  margin-right: 10px;
+}
+.form-container button {
+  padding: 15px 30px;
+  font-size: 16px;
+  color: white;
+  background-color: #4da6ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-container img {
+  width: 200px;
+  height: 200px;
 }
 
 /* Content End */
