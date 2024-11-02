@@ -72,7 +72,7 @@ a {
 }
 
 .nav-menu a:hover {
-  color: #ffae00;
+  color: limegreen;
 }
 
 .nav-buttons .btn-register {
@@ -86,7 +86,8 @@ a {
 }
 
 .nav-buttons .btn-register:hover {
-  background-color: #d78a00;
+  background-color: lightgreen;
+  color: #000;
 }
 
 /* Styling untuk gambar anggota divisi */
@@ -385,16 +386,17 @@ a {
   width: 80%;
   margin: 0 auto;
   margin-top: 100px;
-  height: 40vh;
-  background-color: #007bff;
+  margin-bottom: 100px;
+  height: 35vh;
+  background-color: limegreen;
   border-radius: 20px;
-  padding: 20px;
+  padding: 60px 20px;
 }
 .content {
   text-align: left;
   color: white;
   max-width: 600px;
-  margin-right: 50px;
+  margin-right: 60px;
 }
 .content h1 {
   font-size: 48px;
@@ -402,7 +404,7 @@ a {
   margin: 0;
 }
 .content p {
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0 30px;
 }
 .form-container {
@@ -410,22 +412,28 @@ a {
   align-items: center;
 }
 .form-container input[type="text"] {
-  padding: 15px;
+  padding: 25px;
   font-size: 16px;
   border: none;
   border-radius: 10px;
-  width: 300px;
+  width: 500px;
   margin-right: 10px;
+  outline: none;
 }
 .form-container button {
-  padding: 15px 30px;
+  padding: 25px 50px;
   font-size: 16px;
   color: white;
-  background-color: #4da6ff;
+  background-color: green;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
+
+.form-container button:hover {
+  background-color: darkgreen;
+}
+
 .image-container {
   display: flex;
   justify-content: center;
@@ -437,3 +445,118 @@ a {
 }
 
 /* Content End */
+
+/* Footer Start */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+}
+
+.left {
+  width: 35%;
+}
+
+.middle,
+.right {
+  width: 20%;
+  margin-left: 60px;
+}
+
+.middle ul,
+.right ul {
+  padding: 0;
+}
+
+.middle ul li,
+.right ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.middle ul li a:hover,
+.right ul li a:hover {
+  color: green;
+  transition: all 0.3s ease;
+}
+
+/* Footer End */
+
+/* Tentang Kami Start */
+
+.container-about {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 2.2rem;
+}
+
+.title h3 {
+  font-size: 1.3rem;
+  font-weight: 100;
+  color: #333;
+}
+
+/* YouTubeVideo.css */
+.youtube-video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 10px;
+  margin-bottom: 60px;
+}
+
+.youtube-video {
+  width: 80%;
+  height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0px 3px 3px 0px rgba(212, 212, 212, 0.75);
+}
+
+.paragraph {
+  margin-top: 50px;
+  text-align: justify;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 60px;
+}
+
+.container-ketua {
+  display: flex;
+  justify-content: center;
+  margin: 60px 10%;
+}
+
+.ketua-info {
+  margin-left: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ketua-description {
+  color: green;
+  font-size: 1.5rem;
+}
+
+.ketua-info p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+.ketua-name {
+  font-weight: bold;
+  color: green;
+}
+
+/* Tentang Kami End */

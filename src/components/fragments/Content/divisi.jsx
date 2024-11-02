@@ -70,7 +70,12 @@ const Divisi = () => {
         <div className="divisi-bottom">
           {divisiData.map((divisi, index) => (
             <div key={index} className="divisi-item">
-              <Image src={divisi.icon} width={60} height={60}></Image>
+              <Image
+                alt="icon"
+                src={divisi.icon}
+                width={60}
+                height={60}
+              ></Image>
               <h3>{divisi.title}</h3>
               <p>{divisi.description}</p>
             </div>

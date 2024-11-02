@@ -21,7 +21,7 @@ function Navbar() {
             <Link href="/">Beranda</Link>
           </li>
           <li>
-            <Link href="/tentang">Tentang Kami</Link>
+            <Link href="/tentang-kami">Tentang Kami</Link>
           </li>
           <li>
             <Link href="/divisi">Divisi</Link>

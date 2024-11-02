@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import Image from "next/image";
 
 const FeedbackForm = () => {
   return (
@@ -12,10 +12,10 @@ const FeedbackForm = () => {
         </div>
       </div>
       <div className="image-container">
-        <img
-          alt="An illustration of an open envelope with an '@' symbol on a letter inside"
+        <Image
+          alt="email-icon"
           height="200"
-          src="https://storage.googleapis.com/a1aa/image/4fa3ENqTZ7TsKiTa9zmYoFeImBfJ8kI9tHaGPgrvedzEM8xOB.jpg"
+          src="/assets/icons/email.png"
           width="200"
         />
       </div>
