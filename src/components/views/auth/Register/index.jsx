@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./Register.module.scss";
 import { useRouter } from "next/router";
 import { FormEvent, useState } from "react";
+import Image from "next/image";
 
 const RegisterView = () => {
   const [gender, setGender] = useState("");
@@ -43,59 +44,87 @@ const RegisterView = () => {
 
   return (
     <div className={styles.register}>
-      <h1 className={styles.register__title}>Register</h1>
       {error && <p className={styles.register__error}>{error}</p>}
-      <div className={styles.register__form}>
-        <form onSubmit={handleSubmit}>
-          <div className={styles.register__form__item}>
-            <label htmlFor="npm">NPM</label>
-            <input
-              type="text"
-              name="npm"
-              id="npm"
-              className={styles.register__form__item__input}
-            />
-          </div>
-          <div className={styles.register__form__item}>
-            <label htmlFor="nama">Nama</label>
-            <input
-              type="text"
-              name="nama"
-              id="nama"
-              className={styles.register__form__item__input}
-            />
-          </div>
-          <div className={styles.register__form__item}>
-            <label htmlFor="jenis_kelamin">Jenis Kelamin</label>
-            <select
-              value={gender}
-              onChange={(e) => setGender(e.target.value)}
-              name="jenis_kelamin"
-              id="jenis_kelamin"
-              className={styles.register__form__item__input}
+      <div className={styles.register__container}>
+        <div className={styles.register__container__form}>
+          <form onSubmit={handleSubmit}>
+            <h1 className={styles.register__container__title}>Daftar</h1>
+            <p>Ayo daftarkan diri anda dan jadilah bagian dari HIMATIF 2024!</p>
+            <div className={styles.register__container__form__item}>
+              <input
+                type="text"
+                name="nama"
+                id="nama"
+                placeholder="Nama Lengkap"
+                className={styles.register__container__form__item__input}
+              />
+            </div>
+            <div className={styles.register__container__form__item}>
+              <input
+                type="text"
+                name="npm"
+                id="npm"
+                placeholder="NPM"
+                className={styles.register__container__form__item__input}
+              />
+            </div>
+            <div className={styles.register__container__form__item}>
+              <input
+                type="text"
+                name="kelas"
+                id="kelas"
+                placeholder="Kelas"
+                className={styles.register__container__form__item__input}
+              />
+            </div>
+            <div className={styles.register__container__form__item}>
+              <select
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                name="jenis_kelamin"
+                id="jenis_kelamin"
+                className={styles.register__container__form__item__input}
+              >
+                <option
+                  className={
+                    styles.register__container__form__item__input__placeholder
+                  }
+                  value=""
+                  disabled
+                  selected
+                >
+                  Pilih Jenis Kelamin
+                </option>
+                <option value="Laki-Laki">Laki-Laki</option>
+                <option value="Perempuan">Perempuan</option>
+              </select>
+            </div>
+            <button
+              type="submit"
+              className={styles.register__container__form__button}
             >
-              <option value="" disabled></option>
-              <option value="Laki-Laki">Laki-Laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
-          </div>
-          <div className={styles.register__form__item}>
-            <label htmlFor="kelas">Kelas</label>
-            <input
-              type="text"
-              name="kelas"
-              id="kelas"
-              className={styles.register__form__item__input}
-            />
-          </div>
-          <button type="submit" className={styles.register__form__button}>
-            {isLoading ? "Loading..." : "Register"}
-          </button>
-        </form>
+              {isLoading ? "Loading..." : "Register"}
+            </button>
+            <p>
+              Anda Sudah Punya Akun?{" "}
+              <Link
+                className={styles.register__container__form__link}
+                href="/auth/login"
+              >
+                <span>Masuk Disini</span>
+              </Link>
+            </p>
+          </form>
+        </div>
+        <div className={styles.register__container__image}>
+          <Image
+            src="/assets/images/signup.png"
+            alt="register"
+            width={300}
+            height={500}
+          ></Image>
+        </div>
       </div>
-      <p className={styles.register__link}>
-        Have an account? Sign in <Link href="/auth/login">here</Link>
-      </p>
     </div>
   );
 };

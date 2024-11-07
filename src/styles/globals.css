@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
@@ -62,6 +66,33 @@ a {
 
 .nav-menu li {
   margin: 0 20px; /* Jarak antar item menu */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+}
+
+.dropdown-content {
+  position: absolute;
+  width: 260px;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
 }
 
 .nav-menu a {
@@ -175,6 +206,12 @@ a {
   margin: 0 auto;
 }
 
+.divisi-anggota-container {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .divisi-top h1 {
   margin-top: 40px;
   font-size: 2.2rem;
@@ -202,6 +239,152 @@ a {
   padding: 10px;
   border-radius: 15px;
   transition: background-color 0.3s;
+}
+
+.divisi-content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 40px auto;
+  gap: 10px;
+  margin-bottom: 80px;
+}
+
+.divisi-inti-img,
+.divisi-anggota-img {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.divisi-inti h4,
+.divisi-anggota h4 {
+  color: green;
+  font-size: 1.4rem;
+  margin: 5px;
+}
+
+.divisi-inti p,
+.divisi-anggota p {
+  margin: 5px;
+  color: #333;
+}
+
+.divisi-paragraph {
+  text-align: center;
+  margin: 40px auto;
+  margin-top: 100px;
+  width: 50%;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* inti */
+.divisi-inti:nth-child(1) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+.divisi-inti:nth-child(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.divisi-inti:nth-child(3) {
+  grid-column: 6;
+  grid-row: 2;
+}
+
+.divisi-inti:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.divisi-inti:nth-child(5) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.divisi-inti:nth-child(6) {
+  grid-column: 5;
+  grid-row: 3;
+}
+
+.divisi-inti:nth-child(7) {
+  grid-column: 7;
+  grid-row: 3;
+}
+
+.divisi-inti:nth-child(8) {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.divisi-inti:nth-child(9) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.divisi-inti:nth-child(10) {
+  grid-column: 5;
+  grid-row: 4;
+}
+
+.divisi-inti:nth-child(11) {
+  grid-column: 7;
+  grid-row: 4;
+}
+
+/* anggota */
+.divisi-anggota:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.divisi-anggota:nth-child(2) {
+  grid-column: 6;
+  grid-row: 1;
+}
+
+.divisi-anggota:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.divisi-anggota:nth-child(4) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.divisi-anggota:nth-child(5) {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+.divisi-anggota:nth-child(6) {
+  grid-column: 7;
+  grid-row: 2;
+}
+
+.divisi-anggota:nth-child(7) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.divisi-anggota:nth-child(8) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.divisi-anggota:nth-child(9) {
+  grid-column: 5;
+  grid-row: 3;
+}
+
+.divisi-anggota:nth-child(10) {
+  grid-column: 7;
+  grid-row: 3;
 }
 
 /* Untuk mengatur posisi item */
@@ -294,90 +477,15 @@ a {
   color: #666;
 }
 
-/* .tentang-kami {
-  font-family: "Arial", sans-serif;
+.inti-carousel {
+  width: 40%;
+  margin: 20px auto;
+  border: 1px solid green;
+  text-align: center;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  border-radius: 16px;
+  margin-bottom: 100px;
 }
-
-.header-section {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.header-section h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.header-section .highlight {
-  color: green;
-}
-
-.header-section p {
-  margin-top: 10px;
-  font-size: 1.2rem;
-}
-
-.video-container {
-  margin-top: 20px;
-}
-
-.sejarah-section {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.sejarah-section h2 {
-  font-size: 2rem;
-}
-
-.ketua-section {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.ketua-info {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.ketua-image img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 60px;
-}
-
-.ketua-description {
-  max-width: 700px;
-  margin-left: 30px;
-}
-
-.ketua-description h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-.ketua-description h4 {
-  margin-top: 15px;
-  font-size: 1.2rem;
-}
-
-.ketua-description p,
-.ketua-description ul {
-  font-size: 1rem;
-}
-
-.ketua-description ul {
-  list-style-type: disc;
-  margin-left: 20px;
-} */
 
 .container {
   display: flex;

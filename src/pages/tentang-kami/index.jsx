@@ -19,10 +19,11 @@ const About = () => {
           className="youtube-video"
           width="560"
           height="315"
-          src="https://youtu.be/b65ZB35oYMY?si=XJ9zLMYuAJM0EY8Y"
+          src="https://www.youtube.com/embed/b65ZB35oYMY?si=XJ9zLMYuAJM0EY8Y"
           title="YouTube Video"
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
       </div>
