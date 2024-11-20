@@ -29,3 +29,19 @@ export const signUp = async (userData) => {
 
   return user;
 };
+
+export const signIn = async (username, password) => {
+  const user = await prisma.admin.findFirst({
+    where: {
+      username,
+    },
+  });
+
+  if (user) {
+    if (password === user.password) {
+      return user;
+    }
+  } else {
+    return null;
+  }
+};

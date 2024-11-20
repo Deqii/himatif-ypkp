@@ -65,7 +65,8 @@ const About = () => {
       <div className="container-ketua">
         <div className="ketua-image">
           <Image
-            src="/assets/images/ASTA.jpeg"
+            className="ketua-img"
+            src="/assets/images/Inti/Muhammad Alief Alfiansyah Ramadhan.png"
             width={400}
             height={600}
             alt="ketua"
@@ -93,7 +94,7 @@ const About = () => {
             </p>
           </div>
           <div>
-            <span className="ketua-name">Rizky Surya</span> |{" "}
+            <span className="ketua-name">M Alief Alfiansyah</span> |{" "}
             <span>Ketua Himpunan Mahasiswa Informatika Periode 2024</span>
           </div>
         </div>

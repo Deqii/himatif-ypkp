@@ -3,6 +3,29 @@ import Image from "next/image";
 import React from "react";
 
 const AnggotaDivisi = () => {
+  const anggotaInti = [
+    {
+      name: "M Alief Alfiansyah",
+      role: "Ketua HIMATIF Periode 2024",
+      image: "/assets/images/Inti/Muhammad Alief Alfiansyah Ramadhan.png",
+    },
+    {
+      name: "Anissa Luthfyantie",
+      role: "Staff HIMATIF Periode 2024",
+      image: "/assets/images/Inti/Anissa Luthfyantie Suyitno.png",
+    },
+    {
+      name: "Nelis Virda",
+      role: "Staff HIMATIF Periode 2024",
+      image: "/assets/images/Inti/Nelis Virda Ferdiana.png",
+    },
+    {
+      name: "Ratnawati",
+      role: "Staff HIMATIF Periode 2024",
+      image: "/assets/images/Inti/Ratnawati.png",
+    },
+  ];
+
   return (
     <>
       <div className="divisi-anggota-container">
@@ -12,83 +35,19 @@ const AnggotaDivisi = () => {
             <h3>Himpunan Mahasiswa Informatika Periode 2024</h3>
           </div>
           <div className="divisi-content">
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
-            <div className="divisi-inti">
-              <Image
-                className="divisi-inti-img"
-                width={130}
-                height={200}
-                alt="anggota"
-                src="/assets/images/ASTA.jpeg"
-              ></Image>
-              <h4>Rizky Surya</h4>
-              <p>Ketua Himpunan Informatika Periode 2024</p>
-            </div>
+            {anggotaInti.map((inti, index) => (
+              <div key={index} className="divisi-inti">
+                <Image
+                  className="divisi-inti-img"
+                  width={130}
+                  height={200}
+                  alt="anggota"
+                  src={inti.image}
+                ></Image>
+                <h4>{inti.name}</h4>
+                <p>{inti.role}</p>
+              </div>
+            ))}
           </div>
           <p className="divisi-paragraph">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde

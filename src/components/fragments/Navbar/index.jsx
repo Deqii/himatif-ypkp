@@ -5,6 +5,7 @@ import { useState } from "react";
 
 function Navbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [ishamburgerOpen, setIshamburgerOpen] = useState(false);
 
   // Toggle dropdown visibility
   const toggleDropdown = () => {
@@ -22,7 +23,7 @@ function Navbar() {
             width={80}
             height={80}
           />
-          <span>HIMATIF</span>
+          <span className="logo-text">HIMATIF</span>
         </Link>
         <ul className="nav-menu">
           <li>
@@ -42,13 +43,13 @@ function Navbar() {
             ></Image>
             {isDropdownOpen && (
               <div className="dropdown-content">
-                <a href="/divisi#inti">Inti</a>
-                <a href="/divisi#re">Research and Education</a>
-                <a href="/divisi#community">Community and Business</a>
-                <a href="/divisi#hr">
+                <Link href="/divisi#inti">Inti</Link>
+                <Link href="/divisi#re">Research and Education</Link>
+                <Link href="/divisi#community">Community and Business</Link>
+                <Link href="/divisi#hr">
                   Human Resources Development and Organization
-                </a>
-                <a href="/divisi#public">Public Relations</a>
+                </Link>
+                <Link href="/divisi#public">Public Relations</Link>
               </div>
             )}
           </li>
@@ -64,6 +65,27 @@ function Navbar() {
             Daftar
           </Link>
         </div>
+        <div
+          className="hamburger-menu"
+          onClick={() => setIshamburgerOpen(!ishamburgerOpen)}
+        >
+          <Image
+            alt="hamburger-menu"
+            src="/assets/icons/menu.png"
+            width={30}
+            height={30}
+          />
+        </div>
+        {ishamburgerOpen && (
+          <div className="hamburger-menu-content">
+            <Link href="/">Beranda</Link>
+            <Link href="/tentang-kami">Tentang Kami</Link>
+            <Link href="/divisi">Divisi</Link>
+            <Link href="/faq">FAQ</Link>
+            <Link href="/hubungi">Hubungi Kami</Link>
+            <Link href="/auth/register">Daftar</Link>
+          </div>
+        )}
       </div>
     </nav>
   );
