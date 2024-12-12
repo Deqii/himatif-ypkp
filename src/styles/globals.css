@@ -312,6 +312,7 @@ a {
 .divisi-anggota p {
   margin: 5px;
   color: #333;
+  letter-spacing: 1px;
 }
 
 .divisi-paragraph {
@@ -348,11 +349,13 @@ a {
     width: 80vw;
   }
 
-  .divisi-inti {
+  .divisi-inti,
+  .divisi-anggota {
     margin-bottom: 30px;
   }
 
-  .divisi-inti-img {
+  .divisi-inti-img,
+  .divisi-anggota-img {
     padding: 2px;
   }
 }
@@ -464,6 +467,16 @@ a {
 .divisi-anggota:nth-child(10) {
   grid-column: 7;
   grid-row: 3;
+}
+
+.divisi-anggota:nth-child(11) {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.divisi-anggota:nth-child(12) {
+  grid-column: 6;
+  grid-row: 4;
 }
 
 /* Untuk mengatur posisi item */

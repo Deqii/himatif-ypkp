@@ -45,11 +45,11 @@ function Navbar() {
               <div className="dropdown-content">
                 <Link href="/divisi#inti">Inti</Link>
                 <Link href="/divisi#re">Research and Education</Link>
-                <Link href="/divisi#community">Community and Business</Link>
-                <Link href="/divisi#hr">
+                <Link href="/divisi#cnb">Community and Business</Link>
+                <Link href="/divisi#hrdo">
                   Human Resources Development and Organization
                 </Link>
-                <Link href="/divisi#public">Public Relations</Link>
+                <Link href="/divisi#pr">Public Relations</Link>
               </div>
             )}
           </li>
