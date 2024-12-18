@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div className="container-footer">
@@ -18,19 +20,21 @@ const Footer = () => {
           <h2>Divisi Kami</h2>
           <ul>
             <li>
-              <a href="">Inti</a>
+              <Link href="/divisi#inti">Inti</Link>
             </li>
             <li>
-              <a href="">Pendidikan</a>
+              <Link href="/divisi#re">Research and Education</Link>
             </li>
             <li>
-              <a href="">Minat dan Bakat</a>
+              <Link href="/divisi#cnb">Community and Business</Link>
             </li>
             <li>
-              <a href="">Kesejahteraan Mahasiswa</a>
+              <Link href="/divisi#hrdo">
+                Human Resources Development and Organization
+              </Link>
             </li>
             <li>
-              <a href="">Hubungan Masyarakat</a>
+              <Link href="/divisi#pr">Public Relations</Link>
             </li>
           </ul>
         </div>

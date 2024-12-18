@@ -1,4 +1,4 @@
-import React from "react"; // Gunakan Link untuk routing
+import React, { use, useEffect } from "react"; // Gunakan Link untuk routing
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
@@ -11,6 +11,10 @@ function Navbar() {
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
+
+  useEffect(() => {
+    setIsDropdownOpen(false);
+  }, []);
 
   return (
     <nav className="navbar">
@@ -57,7 +61,7 @@ function Navbar() {
             <Link href="/faq">FAQ</Link>
           </li>
           <li>
-            <Link href="/hubungi">Hubungi Kami</Link>
+            <Link href="#feedback">Hubungi Kami</Link>
           </li>
         </ul>
         <div className="nav-buttons">

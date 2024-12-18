@@ -49,8 +49,8 @@ const LoginView = () => {
             <p className={styles.login__container__form__error}>{error}</p>
           )}
           <form onSubmit={handleSubmit}>
-            <h1 className={styles.login__container__title}>Daftar</h1>
-            <p>Ayo daftarkan diri anda dan jadilah bagian dari HIMATIF 2024!</p>
+            <h1 className={styles.login__container__title}>Login</h1>
+            <p>Masuk ke akun HIMATIF 2024!</p>
             <div className={styles.login__container__form__item}>
               <input
                 type="text"

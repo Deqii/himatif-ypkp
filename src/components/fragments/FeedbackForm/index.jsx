@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FeedbackForm = () => {
   return (
-    <div className="container">
+    <div className="container" id="feedback">
       <div className="content">
         <h1>Kritik dan Saran</h1>
         <p>Punya kritik dan saran? Yuk langsung diisi ya . . .</p>
